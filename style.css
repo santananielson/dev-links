@@ -86,7 +86,7 @@ body * {
   animation: slide-in 0.2s forwards;
 }
 
-#switch button:hover{
+#switch button:hover {
   outline: 8px solid var(--highlight-color);
 }
 
@@ -159,9 +159,10 @@ footer {
   font-size: 14px;
 }
 
-footer a{
+footer a {
   text-decoration: none;
   color: sandybrown;
+  font-weight: 600;
 }
 
 /* media queries */
