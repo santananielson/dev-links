@@ -159,6 +159,11 @@ footer {
   font-size: 14px;
 }
 
+footer a{
+  text-decoration: none;
+  color: sandybrown;
+}
+
 /* media queries */
 @media (min-width: 700px) {
   :root {
