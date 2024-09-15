@@ -48,7 +48,15 @@ body * {
 }
 
 #profile img {
-  width: 112px;
+  width: 116px;
+  height: 116px;
+  clip-path: circle(50% at 50% 50%);
+  object-position: top;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--stroke-color);
+  outline: 2px solid var(--highlight-color);
+  margin-bottom: 16px;
 }
 
 #profile p {
@@ -115,14 +123,16 @@ ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 16px;
 
-  padding: 16px 24px;
+  padding: 24px;
   background: var(--surface-color);
   border-radius: 8px;
   border: 1px solid var(--stroke-color);
   backdrop-filter: blur(4px);
 
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 20px;
   text-decoration: none;
   transition: background 0.2s;
 }
@@ -130,6 +140,8 @@ ul li a {
 ul li a:hover {
   background: var(--surface-color-hover);
   border: 1px solid var(--text-color);
+  transform: scale(1.02);
+  transition: transform 0.2s ease-in-out;
 }
 
 #social-links {
@@ -192,5 +204,45 @@ footer a {
   }
   to {
     left: 0;
+  }
+}
+
+/* Estilo padrão do scroll */
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-thumb-color);
+  border-radius: 10px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+
+/* Degradê do modo dark */
+:root {
+  --scroll-thumb-color: linear-gradient(
+    180deg,
+    #282f48,
+    #471745,
+    #564182
+  ); /* Degradê escuro */
+
+  ::-webkit-scrollbar-track {
+    background-color: #50437e; /* Remove completamente o fundo */
+  }
+}
+
+/* Degradê do modo light */
+.light {
+  --scroll-thumb-color: linear-gradient(
+    180deg,
+    #d3d3f5,
+    #ecf4fe,
+    #f3bfef
+  ); /* Degradê claro */
+
+  ::-webkit-scrollbar-track {
+    background-color: #d3d3f5; /* Remove completamente o fundo */
   }
 }

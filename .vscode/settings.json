@@ -1,7 +1,7 @@
 {
   // editor
   "editor.wordWrap": "on",
-  "editor.fontSize": 18,
+  "editor.fontSize": 13,
   "editor.lineHeight": 30,
   "editor.tabSize": 2,
   "editor.bracketPairColorization.enabled": true,
@@ -16,8 +16,8 @@
 
   // workbench
   "workbench.editor.enablePreview": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "One Dark Pro Mix",
+  "workbench.iconTheme": "icons",
+  "workbench.colorTheme": "Mayukai Midnight",
 
   // prettier
   "editor.defaultFormatter": "esbenp.prettier-vscode",

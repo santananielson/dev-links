@@ -7,6 +7,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -17,7 +21,7 @@
   <body>
     <div id="container">
       <div id="profile">
-        <img src="./assets/avatar.png" alt="Foto Nielson" />
+        <img src="./assets/nielson-1.webp" alt="Foto Nielson" />
         <p>@nielsonsantana1</p>
       </div>
 
@@ -29,27 +33,33 @@
       <div>
         <ul>
           <li>
-            <a href="https://agenciaup7.com.br" target="_blank"
-              >Acesse meu site</a
+            <a href="https://agenciaup7.com.br" target="_blank">
+              <i class="fa-solid fa-rocket fa-lg"></i>
+              Agência</a
             >
           </li>
           <li>
             <a
               href="https://www.linkedin.com/in/nielson-santana/"
               target="_blank"
-              >Meu Linkedin</a
+            >
+              <i class="fa-brands fa-linkedin fa-lg"></i>
+              Linkedin</a
             >
           </li>
           <li>
-            <a href="https://nielsonsantana.agenciaup7.com.br" target="_blank"
-              >Meu Currículo</a
+            <a href="https://nielsonsantana.agenciaup7.com.br" target="_blank">
+              <i class="fa-solid fa-briefcase fa-lg"></i>
+              Portfólio</a
             >
           </li>
           <li>
             <a
-              href="https://api.whatsapp.com/send?phone=5581982460896"
+              href="https://api.whatsapp.com/send?phone=5581984002010"
               target="_blank"
-              >Meu Whatsapp</a
+            >
+              <i class="fa-brands fa-whatsapp fa-lg"></i>
+              Contato</a
             >
           </li>
         </ul>
@@ -85,5 +95,29 @@
     ></script>
 
     <script src="./script.js"></script>
+
+    <!-- Lenis Smooth Scroll Script -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
+
+    <script>
+      const lenis = new Lenis({
+        duration: 1.2, // Duração da rolagem suave
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Curva de suavidade da rolagem
+        orientation: "vertical", // Rolagem vertical
+        gestureOrientation: "vertical", // Orientação de gesto
+        smoothWheel: true, // Roda do mouse suave
+        wheelMultiplier: 1, // Sensibilidade da roda do mouse
+        smoothTouch: false, // Desabilita suavidade em toque
+        touchMultiplier: 2, // Sensibilidade do toque
+        infinite: false, // Não permitir rolagem infinita
+      })
+
+      function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+      }
+
+      requestAnimationFrame(raf)
+    </script>
   </body>
 </html>
